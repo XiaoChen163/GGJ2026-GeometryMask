@@ -1,4 +1,0 @@
-repository "ShapeMaskGGJ/GeometryMask@33263395633390@cloud"
-  path "/"
-    br "/main"
-    co "/main"
