@@ -1,0 +1,202 @@
+﻿using UnityEngine;
+
+// Simple AI controller with a finite state machine: Idle and Attack
+// - Idle: wander randomly around start position and check for player within detectionRange
+// - Attack: chase the player (but stop when within stopDistance) and fire bullets at intervals
+public class AIController : MonoBehaviour
+{
+    private enum State { Idle, Attack }
+    private State state = State.Idle;
+
+    [Header("Sensing")]
+    public float detectionRange =8f;
+
+    [Header("Movement")]
+    public float moveSpeed =2.5f;
+    public float wanderRadius =4f;
+    public float wanderTimer =3f; // time between wander target changes
+    private float wanderCounter;
+    private Vector3 wanderTarget;
+    private Vector3 startPosition;
+
+    [Header("Attack")]
+    public float stopDistance =2f; // distance to stop approaching player
+    public float fireInterval =0.8f;
+    private float fireTimer;
+
+    [Header("Bullet")]
+    public float bulletSpeed =10f;
+    public float spawnOffset =2f; // spawn bullet slightly ahead of AI to avoid self-collision
+
+    private ShapeWithMask entity;
+
+    private Transform target;
+    private SpriteRenderer bodyRenderer;
+    
+
+    private void Awake()
+    {
+        entity = new ShapeWithMask();
+        bodyRenderer = GetComponent<SpriteRenderer>();
+        entity.RandomInit();
+        RenderBody();
+    }
+
+    private void Start()
+    {
+        startPosition = transform.position;
+        wanderCounter =0f; // force immediate pick
+        fireTimer =0f;
+        FindPlayer();
+        SetState(State.Idle);
+    }
+
+    private void Update()
+    {
+         if (target == null)
+         FindPlayer();
+
+        switch (state)
+        {
+            case State.Idle:
+               UpdateIdle();
+            break;
+            case State.Attack:
+               UpdateAttack();
+            break;
+        }
+    }
+
+    private void FindPlayer()
+    {
+        var go = GameObject.FindGameObjectWithTag("Player");
+        if (go != null && 
+            go.GetComponent<PlayerController>().GetShape() != entity.GetTrueShape()) 
+            target = go.transform;
+    }
+
+    private void SetState(State newState)
+    {
+        state = newState;
+        if (state == State.Idle)
+        {
+            // pick a wander target immediately
+            PickNewWanderTarget();
+        }
+        else if (state == State.Attack)
+        {
+           fireTimer =1f;
+        }
+    }
+
+     private void UpdateIdle()
+    {
+       // wander around
+        wanderCounter -= Time.deltaTime;
+        if (wanderCounter <=0f)
+        {
+            PickNewWanderTarget();
+        }
+
+        // move towards wander target
+        transform.position = Vector3.MoveTowards(transform.position, wanderTarget, moveSpeed * Time.deltaTime);
+
+        // check for player
+        if (target != null)
+        {
+            float d = Vector2.Distance(transform.position, target.position);
+            if (d <= detectionRange)
+            {
+               SetState(State.Attack);
+            }
+        }
+    }
+
+    private void UpdateAttack()
+    {
+        if (target == null)
+        {
+            SetState(State.Idle);
+            return;
+        }
+
+        float dist = Vector2.Distance(transform.position, target.position);
+
+        // If player moved out of detection range, return to idle
+        if (dist > detectionRange *1.2f)
+        {
+            SetState(State.Idle);
+            return;
+        }
+
+        if (dist > stopDistance)
+        {
+           transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        }
+
+        fireTimer -= Time.deltaTime;
+        if (fireTimer <=0f)
+        {
+            fireTimer = fireInterval;
+            Vector2 direction = (target.position - transform.position).normalized;
+            Vector3 spawnPos = transform.position + (Vector3)direction * spawnOffset;
+            Vector2 velocity = direction * bulletSpeed;
+
+            if (GameManager.Instance != null)
+            {
+               GameManager.Instance.TrySpawnBullet(spawnPos, velocity, gameObject);
+            }
+        }
+    }
+
+    private void PickNewWanderTarget()
+    {
+        Vector2 rnd = Random.insideUnitCircle * wanderRadius;
+        wanderTarget = startPosition + (Vector3)rnd;
+        wanderCounter = wanderTimer;
+    }
+
+    private void RenderBody()
+    {
+        switch (entity.GetMaskedShape())
+        {
+            case Shape.Circle:
+                bodyRenderer.sprite = Resources.Load<Sprite>("Image/Circle");
+                bodyRenderer.color = Color.red;
+
+                break;
+            case Shape.Square:
+                bodyRenderer.sprite = Resources.Load<Sprite>("Image/Square");
+                bodyRenderer.color = Color.blue;
+                break;
+            case Shape.Triangle:
+                bodyRenderer.sprite = Resources.Load<Sprite>("Image/Triangle");
+                bodyRenderer.color = Color.green;
+                break;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Bullet")) return;
+
+        if (collision.gameObject.GetComponent<Bullet>().Owner != null)
+        {
+            // Destroy AI on hit by player bullet
+            Destroy(gameObject);
+        }
+    }
+
+    public Shape GetShape()
+    {
+        return entity.GetMaskedShape();
+    }
+}

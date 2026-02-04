@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UnityProject\\ShapeMaskGGJ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|d:\\unityproject\\shapemaskggj\\assets\\resources\\sound\\music\\music_placeholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\sound\\music\\music_placeholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|d:\\unityproject\\shapemaskggj\\assets\\core\\ui\\gamerulemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\gamerulemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\bgmplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\bgmplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\youwonmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\youwonmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\ingamemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\ingamemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\uimanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\uimanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\gameovermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\gameovermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\configmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\configmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|D:\\UnityProject\\ShapeMaskGGJ\\assets\\core\\ui\\basepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC001E0-BDD2-D25D-8430-9023648F566E}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\ui\\basepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "music_placeholder.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Resources\\Sound\\Music\\music_placeholder.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Sound\\Music\\music_placeholder.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Resources\\Sound\\Music\\music_placeholder.cs",
+              "RelativeToolTip": "Assets\\Resources\\Sound\\Music\\music_placeholder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T14:23:54.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\PlayerController.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Core\\PlayerController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAWwG8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T10:46:58.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BgmPlayer.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\BgmPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\BgmPlayer.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\BgmPlayer.cs",
+              "RelativeToolTip": "Assets\\Core\\BgmPlayer.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T09:10:52.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ConfigMenu.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\ConfigMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\ConfigMenu.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\ConfigMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\ConfigMenu.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T05:40:02.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "YouWonMenu.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\YouWonMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\YouWonMenu.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\YouWonMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\YouWonMenu.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T22:35:19.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InGameMenu.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\InGameMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\InGameMenu.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\InGameMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\InGameMenu.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T19:08:14.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameRuleMenu.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\GameRuleMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\GameRuleMenu.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\GameRuleMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\GameRuleMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T17:33:04.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GameOverMenu.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\GameOverMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\GameOverMenu.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\GameOverMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\GameOverMenu.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T20:51:26.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BasePanel.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\BasePanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\BasePanel.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\BasePanel.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\BasePanel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T09:15:03.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\MainMenu.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\MainMenu.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:49:32.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Shape.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\Shape.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Shape.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\Shape.cs",
+              "RelativeToolTip": "Assets\\Core\\Shape.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAWwCkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T11:01:04.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\GameManager.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Core\\GameManager.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T15:49:44.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UIManger.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\UIManger.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UI\\UIManger.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\UI\\UIManger.cs",
+              "RelativeToolTip": "Assets\\Core\\UI\\UIManger.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAiwFsAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T16:58:02.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AIController.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\AIController.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\AIController.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\AIController.cs",
+              "RelativeToolTip": "Assets\\Core\\AIController.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAWwDUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T16:04:11.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Bullet.cs",
+              "ToolTip": "D:\\UnityProject\\ShapeMaskGGJ\\Assets\\Core\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Core\\Bullet.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T14:36:22.071Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

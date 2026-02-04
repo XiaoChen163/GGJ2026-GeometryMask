@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    private ShapeWithMask entity;
+
+    private SpriteRenderer maskRenderer;
+    private SpriteRenderer bodyRenderer;
+
+    private Rigidbody2D playerBody;
+
+    private float moveX;
+    private float moveY;
+
+    public float moveSpeed;
+
+    private void Awake()
+    {
+        bodyRenderer = gameObject.GetComponent<SpriteRenderer>();
+        maskRenderer = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        playerBody = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        moveX = Input.GetAxis("Horizontal");
+        moveY = Input.GetAxis("Vertical");
+
+        Vector2 dir = new Vector2(moveX, moveY).normalized;
+
+        playerBody.velocity = dir * moveSpeed;
+    }
+}

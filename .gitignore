@@ -1,0 +1,45 @@
+# Unity 核心忽略文件
+/Library
+/Temp
+/Obj
+/Build
+/Builds
+/Logs
+/StreamingAssets/AssetBundles
+/UserSettings
+/Assets/Fonts
+/Assets/TextMesh Pro
+
+# 隐藏文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 编译产物
+*.pidb.meta
+*.pidb
+*.mdb.meta
+*.mdb
+*.dll
+*.so
+*.dylib
+*.csobj
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.unityproj
+*.booproj
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 包管理额外文件
+Packages/UnityPackageManager/manifest.json.meta
+Packages/UnityPackageManager/versions.json.meta

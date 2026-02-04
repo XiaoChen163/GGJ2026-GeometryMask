@@ -1,0 +1,145 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    private ShapeWithMask entity;
+
+    private SpriteRenderer maskRenderer;
+    private SpriteRenderer bodyRenderer;
+
+    private Rigidbody2D playerBody;
+
+    private float moveX;
+    private float moveY;
+
+    public float moveSpeed;
+
+    public GameObject bulletPrefab; // assign bullet prefab with Bullet + Rigidbody2D in Inspector
+    public float bulletSpeed = 10f;
+    public Transform firePoint; // optional: where bullets spawn; if null, use player position
+
+    // Pooling
+    public int maxActiveBullets = 100;
+    public int poolSize = 200; // total pool size
+    public float bulletLifeTime = 5f;
+
+    private Queue<GameObject> bulletPool = new Queue<GameObject>();
+    private int activeBulletCount = 0;
+
+    private void Awake()
+    {
+        bodyRenderer = gameObject.GetComponent<SpriteRenderer>();
+        maskRenderer = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        playerBody = gameObject.GetComponent<Rigidbody2D>();
+
+        // initialize pool if prefab assigned
+        if (bulletPrefab != null)
+        {
+            for (int i = 0; i < poolSize; i++)
+            {
+                GameObject go = Instantiate(bulletPrefab);
+                go.SetActive(false);
+                bulletPool.Enqueue(go);
+            }
+        }
+    }
+
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        moveX = Input.GetAxis("Horizontal");
+        moveY = Input.GetAxis("Vertical");
+
+        Vector2 dir = new Vector2(moveX, moveY).normalized;
+
+        playerBody.velocity = dir * moveSpeed;
+
+        // Fire bullet toward mouse click
+        if (Input.GetMouseButtonDown(0) && bulletPrefab != null)
+        {
+            if (activeBulletCount >= maxActiveBullets)
+            {
+                // reached active bullet limit
+                return;
+            }
+
+            GameObject bulletGO = GetBulletFromPool();
+            if (bulletGO == null) return;
+
+            Camera cam = Camera.main;
+            if (cam == null) return;
+
+            Vector3 mouseWorld = cam.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorld.z = 0f;
+
+            Vector3 spawnPos = (firePoint != null) ? firePoint.position : transform.position;
+            Vector2 toTarget = (mouseWorld - spawnPos).normalized;
+
+            bulletGO.transform.position = spawnPos;
+            bulletGO.transform.rotation = Quaternion.identity;
+
+            Bullet bulletComp = bulletGO.GetComponent<Bullet>();
+            Rigidbody2D rb = bulletGO.GetComponent<Rigidbody2D>();
+
+            // Prepare return callback
+            System.Action<GameObject> returnToPool = (go) =>
+            {
+                go.SetActive(false);
+                bulletPool.Enqueue(go);
+                activeBulletCount = Mathf.Max(0, activeBulletCount - 1);
+            };
+
+            activeBulletCount++;
+
+            if (bulletComp != null)
+            {
+                bulletComp.Shoot(toTarget * bulletSpeed, bulletLifeTime, returnToPool);
+            }
+            else if (rb != null)
+            {
+                bulletGO.SetActive(true);
+                rb.velocity = toTarget * bulletSpeed;
+                // Start coroutine to return to pool later
+                StartCoroutine(ReturnAfterLifetime(bulletGO, bulletLifeTime, returnToPool));
+            }
+            else
+            {
+                // no component to move bullet, just return it
+                returnToPool(bulletGO);
+            }
+        }
+    }
+
+    private GameObject GetBulletFromPool()
+    {
+        if (bulletPool.Count > 0)
+        {
+            GameObject go = bulletPool.Dequeue();
+            go.SetActive(true);
+            return go;
+        }
+
+        // pool empty, try to expand if allowed
+        if (poolSize < 10000)
+        {
+            GameObject go = Instantiate(bulletPrefab);
+            go.SetActive(true);
+            return go;
+        }
+
+        return null;
+    }
+
+    private IEnumerator ReturnAfterLifetime(GameObject go, float lifetime, System.Action<GameObject> returnToPool)
+    {
+        yield return new WaitForSeconds(lifetime);
+        returnToPool(go);
+    }
+}
