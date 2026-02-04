@@ -9,6 +9,8 @@
 /UserSettings
 /Assets/Fonts
 /Assets/TextMesh Pro
+/.vs
+/.plastic
 
 # 隐藏文件
 .DS_Store
@@ -39,6 +41,8 @@ Thumbs.db
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+ignore.conf
+*.vsconfig
 
 # 包管理额外文件
 Packages/UnityPackageManager/manifest.json.meta
